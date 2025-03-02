@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qr-code</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0px;
+            box-sizing: content-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .main-container {
+            background-image: url("https://wallpapers.com/images/file/image-background-i6gx0lrv6r0sep9t.jpg");
+            object-fit: cover;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: aqua;
+        }
+        .url-title{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .input-url-link{
+            font-size: 16px;
+            border:none;
+            padding: 10px;
+            border-radius: 10px;
+            width: 350px;
+        }
+        .btn-primary{
+            font-size: 16px;
+            border:none;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .qr-image{
+            margin:100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1 class="url-title">ENTER THE URL</h1>
+            <input type="text" name="url" placeholder="Enter the url" class="input-url-link">
+            <button onclick="getURL()" class="btn-primary">Submit</button>
+        </div>
+        <div  class="qr-image">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+    <script src="index.js" >  </script>
+//         function getURL() {
+//   let url_value = document.querySelector(".input-url-link").value;
+//   var QRCode = require("qrcode");
+//   var canvas = document.querySelector(".qr-image");
+//   QRCode.toCanvas(canvas, url_value, function (error) {
+//     if (error) console.error(error);
+//     console.log("success!");
+//   });
+// }
+
+</body>
+
+</html>
